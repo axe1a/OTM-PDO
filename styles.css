@@ -1,0 +1,255 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Reset and Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url("core/bg.jpg");
+  background-color: rgb(161, 129, 86);
+}
+
+/* Container Styles */
+.container {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container header::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  background-color: burlywood;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.container form {
+  margin-top: 16px;
+  min-height: 480px;
+  background-color: #fff;
+}
+
+.container form .details {
+  margin-top: 15px;
+}
+
+.container form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: rgb(19, 19, 19);
+}
+
+.container form .fields {
+  display: block;
+  align-items: center;
+}
+
+form .input .inputPlanner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.inputPlanner label {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(19, 19, 19);
+}
+
+.inputPlanner input {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.inputPlanner input:is(:focus, :valid) {
+  box-shadow: 1px 1px rgb(19, 19, 19);
+}
+
+/* Gender Box Styles */
+.form .gender-box {
+  margin-top: 20px;
+}
+
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form .gender {
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: burlywood;
+  cursor: pointer;
+}
+
+.gender label {
+  color: #707070;
+  cursor: pointer;
+}
+
+/* Select Box Styles */
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+/* Button Styles */
+.container form button,
+.form button,
+input[type="submit"] {
+  height: 45px;
+  width: 100%;
+  max-width: 200px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 25px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgb(240, 209, 169);
+}
+
+.container form button:hover,
+.form button:hover,
+input[type="submit"]:hover {
+  background-color: burlywood;
+  color: #fff;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+table th {
+  background-color: #f0d1a9;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Link Buttons */
+a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px;
+  color: #000;
+  background-color: burlywood;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(240, 209, 169);
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+  
+  table, th, td {
+    font-size: 12px;
+  }
+}
+
+
+.details.details-box {
+  padding: 20px;  /* Add padding */
+  background-color: #fafafa;  /* Light background for better contrast */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow for depth */
+  margin-bottom: 20px;  /* Space between details and form */
+  border: 1px solid #e0e0e0;  /* Soft border */
+}
+
+/* Additional visual effect to highlight the details */
+.details.details-box:hover {
+  background-color: #f0f0f0;  /* Darken background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* Increase shadow on hover */
+  transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
